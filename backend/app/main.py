@@ -22,5 +22,6 @@ def scrape_article(request: ScrapeRequest):
             "publish_date": article.publish_date,
             "summary": article.text[:300] + "..." # First 300 chars
         }
+    
     except Exception as e:
         return {"error": str(e)}
